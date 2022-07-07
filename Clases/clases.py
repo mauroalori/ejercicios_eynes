@@ -1,5 +1,8 @@
 import math
 
+#multiplicador del objeto "Circulo"
+n= 3
+
 class circulo:
     def __init__(self,rad):
         if rad>0:
@@ -18,7 +21,7 @@ class circulo:
         return perimetro
     
     def __str__(self):
-        return "El radio vale %.2fcm. El perimetro vale %.2fcm. El area vale %fcm²."% (self.radio,self.calcular_perimetro(),self.calcular_area())
+        return "El radio vale %.2fcm. El perimetro vale %.2fcm. El area vale %.2fcm²." %(self.radio,self.calcular_perimetro(),self.calcular_area())
 
 
 radio=float(input("Ingrese el radio del circulo(en cm): "))
@@ -33,3 +36,8 @@ while(flag):
         radio=float(input("Ingrese el radio del circulo(en cm): "))
 
 print(Circulo)
+
+if(n>0):
+    Circulo_por_n = circulo(Circulo.radio * n)
+
+print(Circulo_por_n)
