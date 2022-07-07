@@ -12,11 +12,23 @@ class circulo:
     
     #funcion para calcular el área
     def calcular_area(self):
+        """
+        Testeando el calculo del area
+        ----------------------------------
+        >>> test.calcular_area()
+        78.54
+        """
         area=round(math.pi*pow(self.radio,2),2)
         return area
     
     #funcion para calcular el perímetro
     def calcular_perimetro(self):
+        """
+        Testeando el calculo del perimetro
+        ----------------------------------
+        >>> test.calcular_perimetro()
+        31.42
+        """
         perimetro=round(2*math.pi*self.radio,2)
         return perimetro
     
@@ -41,3 +53,7 @@ if(n>0):
     Circulo_por_n = circulo(Circulo.radio * n)
 
 print(Circulo_por_n)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(globs={'test':circulo(5)})
