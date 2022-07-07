@@ -35,7 +35,7 @@ class circulo:
     def __str__(self):
         return "El radio vale %.2fcm. El perimetro vale %.2fcm. El area vale %.2fcm²." %(self.radio,self.calcular_perimetro(),self.calcular_area())
 
-
+#se ingresa un valor de radio por linea de comandos y se valida
 radio=float(input("Ingrese el radio del circulo(en cm): "))
 
 flag=True
@@ -49,6 +49,7 @@ while(flag):
 
 print(Circulo)
 
+#se instancia el circulo con el radio multiplicado por n
 if(n>0):
     Circulo_por_n = circulo(Circulo.radio * n)
 
